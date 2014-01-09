@@ -54,6 +54,11 @@
 
 #import <objc/runtime.h>
 
+@protocol GHTDummyProtocol <NSObject>
+- (void) _setUp;
+- (void) _tearDown;
+@end
+
 NSInteger ClassSort(id a, id b, void *context) {
   const char *nameA = class_getName([a class]);
   const char *nameB = class_getName([b class]);

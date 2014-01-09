@@ -158,7 +158,7 @@ running=running_, exceptionFilename=exceptionFilename_, exceptionLineNumber=exce
 }
 
 - (IBAction)updateMode:(id)sender {
-  GHUDebug(@"Update mode: %d", _segmentedControl.selectedSegment);
+  GHUDebug(@"Update mode: %ld", (long)_segmentedControl.selectedSegment);
   switch(_segmentedControl.selectedSegment) {
     case 0: {
       dataSource_.editing = NO;
